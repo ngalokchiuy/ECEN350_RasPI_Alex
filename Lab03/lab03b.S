@@ -2,6 +2,9 @@
 //   UIN = UIN−1;
 //}
 
+.globl lab03b
+
+.section text
 //load address for UIN
 ADRP X3, UIN
 ADD X3, X3 :lo12:UIN
