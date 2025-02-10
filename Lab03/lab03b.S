@@ -4,7 +4,7 @@
 
 .globl lab03b
 
-.section text
+.section .text
 lab03b:
 //load address for UIN
 ADRP X3, UIN
@@ -26,6 +26,6 @@ Exit: STUR X2, [X3, #0]
 BR X30
 
 
-.section data
+.section .data
 UIN: .quad 37 // sum of 633008296
 
