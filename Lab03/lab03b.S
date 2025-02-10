@@ -27,5 +27,5 @@ BR X30
 
 
 .section data
-UIN: .quad // do I put sum or number
-MyUIN: .quad 633008296
+UIN: .quad 37 // sum of 633008296
+
