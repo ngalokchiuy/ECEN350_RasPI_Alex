@@ -25,7 +25,7 @@ Loop: SUB X8, X9, #10 // i - 10
 
   ADD X4, X4, #1 //  ++j
   ADD X9, X9, #1 // ++i
-  ADD X3, X3, #8 // move one word (8 bytes)
+  ADD X3, X3, #8 // move double word (8 bytes)
   
 Exit:
 
