@@ -5,6 +5,7 @@
 .globl lab03b
 
 .section text
+lab03b:
 //load address for UIN
 ADRP X3, UIN
 ADD X3, X3 :lo12:UIN
@@ -20,7 +21,10 @@ Loop:SUB X8, X9, #10 // X8 is condition reg
 
 // clean up
 Exit: STUR X2, [X3, #0]
-  
+
+//return to main
+BR X30
+
 
 .section data
 UIN: .quad // do I put sum or number
