@@ -25,6 +25,6 @@ BL my_mult // X0 = factorial(n-1), X1 = n --> now X0 = X1*X0
 Exit:
 LDUR  X30 [X28, #0] // get LR
 LDUR X1, [X28, #8]
-ADD X28, X28, #16
+ADD X28, X28, #16 // restore SP
 
 B X30 // leave
