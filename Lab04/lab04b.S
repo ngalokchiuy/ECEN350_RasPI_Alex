@@ -1,6 +1,6 @@
 .globl factorial
 .section .text
-// use my_mult, x0, x1
+// use my_mul, x0, x1
 
 factorial:
 // set up ____________________________
@@ -18,13 +18,13 @@ mult_loop:
 ADD X1, X0, #0 // move n to X1 to save
 SUB X0, X0, #1 // (n-1)
 BL factorial // factorial(n-1) = X0
-BL my_mult // X0 = factorial(n-1), X1 = n --> now X0 = X1*X0
+BL my_mul // X0 = factorial(n-1), X1 = n --> now X0 = X1*X0
 // returns X0, now we proced to exit
 
 // clean up ____________________________
 Exit:
 LDUR  X30, [X28, #0] // get LR
-STUR X1, [X28, #8] // save X1
+LDUR X1, [X28, #8] // save X1
 ADD X28, X28, #16 // restore SP
 
-B X30 // leave
+BR X30 // leave
