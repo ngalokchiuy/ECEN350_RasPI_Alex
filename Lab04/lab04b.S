@@ -9,8 +9,8 @@ STUR X1, [X28, #8]
 STUR X30 [X28, #0] // save LR
 
 // do condition for n ________________
-CBNZ X0 mult_loop // if n!=0, exit funciton
-MOV X0, #1 // return 1
+CBNZ X0 mult_loop // if n!=0, do factorial
+MOV X0, #1 // otherwise return 1 and leave
 B Exit // skip to end
 
 // continue factorial here _____________
