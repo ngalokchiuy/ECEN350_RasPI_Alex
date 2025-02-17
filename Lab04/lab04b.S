@@ -4,7 +4,8 @@
 
 factorial:
 // set up ____________________________
-SUB X28, X28, #8 // make room on stack
+SUB X28, X28, #16 // make room on stack
+STUR X1, [X28, #8] // save X1
 STUR X30, [X28, #0] // save LR
 
 // do condition for n ________________
@@ -23,6 +24,7 @@ BL my_mult // X0 = factorial(n-1), X1 = n --> now X0 = X1*X0
 // clean up ____________________________
 Exit:
 LDUR  X30, [X28, #0] // get LR
-ADD X28, X28, #8 // restore SP
+STUR X1, [X28, #8] // save X1
+ADD X28, X28, #16 // restore SP
 
 B X30 // leave
