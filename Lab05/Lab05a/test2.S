@@ -1,4 +1,4 @@
-// X1 - X0
+// X0 - x1
 // will use print later, so not leaf function, must save regs
 
 .globl test2
@@ -30,5 +30,5 @@ test2:
 
 .section .data
 my_string:
-  .asciz "Result of test(6, 5) = %lld\n"
+  .asciz "Result of test2(6, 5) = %lld\n"
   
