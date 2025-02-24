@@ -10,5 +10,16 @@ test2:
   STUR X1, [SP, 8] // save second arg just incase
 
   SUB X0, X0, X1
-  
+
+  // print later
+
+  LDUR X30, [SP, 0]
+  LDUR X1, [SP, 8]
+  ADD, SP, SP, 16 // restore
+
+  BR X30
+
+.section .data
+my_string:
+  .asciz // todo
   
